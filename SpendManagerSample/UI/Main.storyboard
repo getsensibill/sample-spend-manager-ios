@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MyViewController" customModule="SpendManagerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vId-Ir-aQg">
+                                <rect key="frame" x="16" y="91" width="361" height="695"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full SDK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEI-Yf-vk4">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="sgl-E7-6FS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNn-6q-4bC">
+                                        <rect key="frame" x="0.0" y="60" width="361" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="J8I-f9-yXj"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start Sensibill SDK"/>
+                                        <connections>
+                                            <action selector="onFullStartSdkClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9KT-Pb-Dec"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5z6-M2-E5O">
+                                        <rect key="frame" x="0.0" y="120" width="361" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start Spend Manager"/>
+                                        <connections>
+                                            <action selector="onFullStartSmClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fSK-hM-3MV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSP-Is-tFn">
+                                        <rect key="frame" x="0.0" y="180" width="361" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start Capture Flow"/>
+                                        <connections>
+                                            <action selector="onFullCaptureFlowClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bH0-TG-6rm"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standalone Capture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ny-7r-SOk">
+                                        <rect key="frame" x="0.0" y="240" width="361" height="44"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vi8-OS-ujU">
+                                        <rect key="frame" x="0.0" y="300" width="361" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Launch Capture"/>
+                                        <connections>
+                                            <action selector="onCaptureLaunchClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iXW-rp-sBo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uD-xX-Jgi" userLabel="Spacer">
+                                        <rect key="frame" x="0.0" y="360" width="361" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="n1i-cl-Pkx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nry-C3-xRY">
+                                        <rect key="frame" x="0.0" y="398" width="361" height="44"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snA-JU-dLo">
+                                        <rect key="frame" x="0.0" y="458" width="361" height="237"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Click Start Sensibill SDK or Launch Capture. The results of the operations will appear in this view" translatesAutoresizingMaskIntoConstraints="NO" id="Uv8-ER-QNh">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="237"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                            </textView>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sdw-AH-yTK">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="237"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Uv8-ER-QNh" firstAttribute="top" secondItem="snA-JU-dLo" secondAttribute="top" id="6lv-Gg-XVv"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sdw-AH-yTK" secondAttribute="bottom" id="HY2-ou-SZi"/>
+                                            <constraint firstItem="Uv8-ER-QNh" firstAttribute="leading" secondItem="snA-JU-dLo" secondAttribute="leading" id="Iml-0u-b5R"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sdw-AH-yTK" secondAttribute="trailing" id="PC0-ci-fBi"/>
+                                            <constraint firstAttribute="bottom" secondItem="Uv8-ER-QNh" secondAttribute="bottom" id="S1l-4b-xbZ"/>
+                                            <constraint firstItem="Sdw-AH-yTK" firstAttribute="top" secondItem="snA-JU-dLo" secondAttribute="top" id="Xog-D4-kcD"/>
+                                            <constraint firstAttribute="trailing" secondItem="Uv8-ER-QNh" secondAttribute="trailing" id="kvk-Kq-dD7"/>
+                                            <constraint firstItem="Sdw-AH-yTK" firstAttribute="leading" secondItem="snA-JU-dLo" secondAttribute="leading" id="oe0-RC-Fix"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5z6-M2-E5O" firstAttribute="height" secondItem="FNn-6q-4bC" secondAttribute="height" id="CN5-B8-qEp"/>
+                                    <constraint firstItem="7ny-7r-SOk" firstAttribute="height" secondItem="jEI-Yf-vk4" secondAttribute="height" id="Kv6-A5-X3H"/>
+                                    <constraint firstItem="VSP-Is-tFn" firstAttribute="height" secondItem="FNn-6q-4bC" secondAttribute="height" id="l7J-tE-K4u"/>
+                                    <constraint firstItem="vi8-OS-ujU" firstAttribute="height" secondItem="FNn-6q-4bC" secondAttribute="height" id="rqH-MS-sj1"/>
+                                    <constraint firstItem="Nry-C3-xRY" firstAttribute="height" secondItem="jEI-Yf-vk4" secondAttribute="height" id="yb5-um-iF8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vId-Ir-aQg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="6zT-N3-Xtx"/>
+                            <constraint firstItem="vId-Ir-aQg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="L47-vF-5iA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="vId-Ir-aQg" secondAttribute="bottom" constant="32" id="Mxl-Yh-d2I"/>
+                            <constraint firstItem="vId-Ir-aQg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ige-xF-EPw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captureLaunch" destination="vi8-OS-ujU" id="q1i-rJ-kF4"/>
+                        <outlet property="fullCaptureFlow" destination="VSP-Is-tFn" id="wy4-Wz-FAk"/>
+                        <outlet property="fullStartSdk" destination="FNn-6q-4bC" id="EDd-Oj-tHP"/>
+                        <outlet property="fullStartSm" destination="5z6-M2-E5O" id="fKo-hV-UhU"/>
+                        <outlet property="resultsImage" destination="Sdw-AH-yTK" id="2fJ-gv-LgT"/>
+                        <outlet property="resultsInfo" destination="Uv8-ER-QNh" id="pdd-q9-aq1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
