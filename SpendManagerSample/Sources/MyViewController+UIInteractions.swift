@@ -12,6 +12,17 @@ import UIKit
 /// This extension provides functions for Demo UI, not related to Sensibill SDK integration
 extension MyViewController {
     
+    /// Set the colors of the UI, based on selected branding
+    func setAppearance() {
+        
+        // Own colors
+        self.view.backgroundColor = UIColor(branding.colors.surface)
+        self.view.tintColor = UIColor(branding.colors.primary)
+        
+        // Navigation bar
+        UIBarButtonItem.appearance().tintColor = UIColor(branding.colors.onPrimary)
+    }
+    
     func adjustButtons(fullStartSdkLabel: String? = nil, fullStartSmEnabled: Bool? = nil, fullCaptureFlowEnabled: Bool? = nil, captureLaunchEnabled: Bool? = nil) {
         
         guard Thread.isMainThread else {
@@ -54,7 +65,8 @@ extension MyViewController {
         resultsImage.isHidden = true
         resultsInfo.isHidden = false
         
-        resultsInfo.text = info
+        let previousText = resultsInfo.text ?? ""
+        resultsInfo.text = "\(info)\n\(previousText)"
     }
     
     func showImage(_ image: Data) {
@@ -70,38 +82,5 @@ extension MyViewController {
         resultsImage.isHidden = false
         
         resultsImage.image = UIImage(data: image)
-    }
-    
-    /// Show the provided transaction
-    func formatTransactionForDisplay(_ transaction: SBLTransaction) -> String {
-        
-        // Transaction status
-        var result = "\(transaction.localID): \(transaction.status.description) ("
-        
-        // Transaction remote ID. Only available when image was uploaded
-        if let remoteID = transaction.remoteID {
-            result += " remoteId=\(remoteID) "
-        }
-        
-        // Transaction
-        if let receiptID = transaction.receiptID {
-            result += " receiptID=\(receiptID) "
-        }
-        
-        result += ")\n"
-        
-        return result
-    }
-    
-    /// Show the transactions in given array
-    func showTransactions(_ transactions: [SBLTransaction]) {
-        
-        var result = "Status at \(Date()):\n"
-        
-        transactions.forEach { transaction in
-            result += formatTransactionForDisplay(transaction)
-        }
-        
-        showInfo(result)
     }
 }

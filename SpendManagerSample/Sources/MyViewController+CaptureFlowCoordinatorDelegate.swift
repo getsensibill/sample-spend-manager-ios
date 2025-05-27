@@ -9,24 +9,23 @@ import Sensibill
 
 /// This extension implements `CaptureFlowCoordinatorDelegate`, required for Capture Flow invocation
 extension MyViewController: CaptureFlowCoordinatorDelegate {
-
-    func coordinatorDidFinishCapture(_ coordinator: CaptureFlowCoordinator, transactions: [SBLTransaction]) {
-        
-        showInfo("Capture flow finished. Starting to monitor uploads")
+    
+    func coordinatorDidFinishCapture(
+        _ coordinator: Sensibill.CaptureFlow.Coordinator,
+        result: Sensibill.CaptureFlow.ProcessingInfo
+    ) {
+        showInfo("Capture flow finished. Will monitor uploads for \(result.sourceIds)")
         
         // Release a preserved instance of the coordinator
         self.captureFlowCoordinator = nil
         
-        // For demo, report the transactions we obtained
-        showTransactions(transactions)
-        
         // We can also start Sensibill UI on Edit Metadata screen with the provided transaction
         if DemoConfig.displayMetadataEditAfterCaptureFlow {
-            startUIOnEditMetadataScreen(transactions)
+            startUIOnEditMetadataScreen(result.sourceIds)
         }
     }
-    
-    func coordinatorDidCancelCapture(_ coordinator: CaptureFlowCoordinator) {
+
+    func coordinatorDidCancelCapture(_ coordinator: CaptureFlow.Coordinator) {
         
         showInfo("Capture flow was cancelled")
         
@@ -34,6 +33,6 @@ extension MyViewController: CaptureFlowCoordinatorDelegate {
         self.captureFlowCoordinator = nil
         
         // Transaction monitoring is not neccessary
-        stopTransactionObservation()
+        stopUploadObservation()
     }
 }

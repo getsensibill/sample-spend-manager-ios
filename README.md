@@ -2,7 +2,7 @@
 
 ## Overview
 
-The sample provides a simple, but fully functional implementation, which explores various integration options and demonstrates the features and the configurability of the Sensibill SDK.
+This sample app provides a simple, but fully functional implementation, which explores various integration options and demonstrates the features and the configurability of the Sensibill SDK.
 
 Currently the following flows are demonstrated by the sample:
 

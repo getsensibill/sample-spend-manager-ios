@@ -23,14 +23,14 @@ class MyViewController: UIViewController {
     @IBOutlet var resultsInfo: UITextView!
     @IBOutlet var resultsImage: UIImageView!
     
-    /// Instance of Sensibill UI
-    var sensibillUICoordinator: SensibillUICoordinator?
+    var captureFlowCoordinator: CaptureFlow.Coordinator?
     
-    /// Instance of Capture Flow Coordinator
-    var captureFlowCoordinator: CaptureFlowCoordinator?
- 
     /// Sets to true when SDK was started. For demo UI, not related to Sensibill SDK integration
     var isStarted = false
+    
+    override func viewDidLoad() {
+        setAppearance()
+    }
     
     @IBAction func onFullStartSdkClick(_ sender: Any) {
         if !isStarted {
@@ -41,13 +41,12 @@ class MyViewController: UIViewController {
     }
     
     @IBAction func onFullStartSmClick(_ sender: Any) {
-        
-        guard let presentationMethod = DemoConfig.uiPresentationMethod else {
-            startUIWithDefaultPresentationMethod()
+        if DemoConfig.startUIModalInsteadOfPush {
+            startUIModal(navigationIntent: DemoConfig.navigationIntent)
             return
         }
         
-        startUIWithProvidedPresentationMethod(presentationMethod)
+        startUIByPush(navigationIntent: DemoConfig.navigationIntent)
     }
     
     @IBAction func onFullCaptureFlowClick(_ sender: Any) {
@@ -56,10 +55,11 @@ class MyViewController: UIViewController {
     
     @IBAction func onCaptureLaunchClick(_ sender: Any) {
         
-        if !DemoConfig.useStandaloneCaptureCustomConfiguration {
-            launchCaptureWithDefaultConfiguration()
+        if !DemoConfig.useCustomSdkBranding &&
+            !DemoConfig.useAdvancedRuntimeSettingsForCapture {
+            launchCaptureWithDefaultBranding()
         } else {
-            launchCaptureWithCustomConfiguration()
+            launchCaptureWithCustomBranding()
         }
     }
 }

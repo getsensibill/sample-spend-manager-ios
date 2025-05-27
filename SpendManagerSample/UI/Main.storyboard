@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQg-xR-jGZ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="95q-Th-lMt">
+            <objects>
+                <navigationController id="FQg-xR-jGZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qfr-5z-oGe">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="jPH-ou-uTB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDL-TU-0Ci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1546" y="-16"/>
+        </scene>
         <!--My View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -18,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vId-Ir-aQg">
-                                <rect key="frame" x="16" y="91" width="361" height="695"/>
+                                <rect key="frame" x="16" y="135" width="361" height="651"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full SDK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEI-Yf-vk4">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="44"/>
@@ -86,17 +102,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snA-JU-dLo">
-                                        <rect key="frame" x="0.0" y="458" width="361" height="237"/>
+                                        <rect key="frame" x="0.0" y="458" width="361" height="193"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Click Start Sensibill SDK or Launch Capture. The results of the operations will appear in this view" translatesAutoresizingMaskIntoConstraints="NO" id="Uv8-ER-QNh">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="237"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="193"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                             </textView>
                                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sdw-AH-yTK">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="237"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="193"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -130,6 +146,7 @@
                             <constraint firstItem="vId-Ir-aQg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ige-xF-EPw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sE7-NN-cvA"/>
                     <connections>
                         <outlet property="captureLaunch" destination="vi8-OS-ujU" id="q1i-rJ-kF4"/>
                         <outlet property="fullCaptureFlow" destination="VSP-Is-tFn" id="wy4-Wz-FAk"/>
@@ -141,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="-34"/>
+            <point key="canvasLocation" x="-413" y="-16"/>
         </scene>
     </scenes>
     <resources>

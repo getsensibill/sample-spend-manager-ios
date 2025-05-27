@@ -1,22 +1,22 @@
 PODS:
-  - Sensibill (2022.0.6)
+  - Sensibill (2025.0.0)
 
 DEPENDENCIES:
-  - "Sensibill (from `git@github.com:getsensibill/sdk-ios.git`, tag `v2022.0.6`)"
+  - "Sensibill (from `git@github.com:getsensibill/sdk-ios.git`, tag `v2025.0.0`)"
 
 EXTERNAL SOURCES:
   Sensibill:
     :git: "git@github.com:getsensibill/sdk-ios.git"
-    :tag: v2022.0.6
+    :tag: v2025.0.0
 
 CHECKOUT OPTIONS:
   Sensibill:
     :git: "git@github.com:getsensibill/sdk-ios.git"
-    :tag: v2022.0.6
+    :tag: v2025.0.0
 
 SPEC CHECKSUMS:
-  Sensibill: 0034e1132b76fc790b33ef108d9a6b81bde57f08
+  Sensibill: fd71ae1f45dc5fe1aff7c98214c6a07ccfd102ef
 
-PODFILE CHECKSUM: bfdbd0bf9fff1e027d584f33de182ef1ac301013
+PODFILE CHECKSUM: 77bed4e2cf45011a184e4c7a9f6c74ad60193546
 
 COCOAPODS: 1.16.2

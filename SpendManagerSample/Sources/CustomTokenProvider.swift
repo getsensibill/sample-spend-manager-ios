@@ -9,10 +9,13 @@
 import Sensibill
 
 class CustomTokenProvider: TokenProvider {
-
+    
     /// Demo implementation: returns a token set in DemoConfig
-    func provideTokenReplacement(completion: @escaping (Credentials?, Error?) -> ()) {
-        let credentials = Credentials.init(accessToken: DemoConfig.accessToken)
+    func provideTokenReplacement(
+        userIdentifier: String,
+        completion: @escaping (SensibillSDK.Credentials?, (any Error)?) -> Void
+    ) {
+        let credentials = SensibillSDK.Credentials(accessToken: DemoConfig.accessToken)
         completion(credentials, nil)
     }
 }
